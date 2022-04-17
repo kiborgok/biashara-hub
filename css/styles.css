@@ -5,7 +5,7 @@ body {
 .signin, .signup{
   margin: auto;
 }
-.signup-hidden, .signin-hidden, .home-container-hidden{
+.signup-hidden, .signin-hidden, .home-container-hidden, .admin-container-hidden{
     display: none;
 }
 
