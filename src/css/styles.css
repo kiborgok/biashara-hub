@@ -1,0 +1,57 @@
+body {
+  font-family: 'Poppins';
+  /* background-color: rgba(255, 1, 1, 0.1); */
+}
+.active{
+  color: orangered!important;
+}
+.signin, .signup{
+  margin: auto;
+}
+.signup-hidden, .signin-hidden, .home-container-hidden, .admin-container-hidden{
+    display: none;
+}
+
+.signup-div, .signin-div {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+  width: 40%;
+}
+
+.sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+label{
+    margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border: 1px solid #dc354575;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.btn{
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgba(249, 0, 104, 1) 0%,
+    rgba(247, 117, 24, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(249, 0, 104, 1) 0%,
+    rgba(247, 117, 24, 1) 100%
+  );
+}
