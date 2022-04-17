@@ -46,10 +46,10 @@
             <li class="nav-item" id="register">
               <a class="nav-link" href="#">Register</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="profile">
               <a class="nav-link" href="#">Profile</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="admin">
               <a class="nav-link" href="#">Admin</a>
             </li>
             <!-- <li class="nav-item dropdown">
@@ -443,6 +443,95 @@
           </div>
           <button type="button" class="btn btn-primary">Sign in</button>
         </form>
+      </div>
+      <!-- Admin section -->
+      <div class="admin-container-hidden admin-container">
+        <div class="admin-content">
+          <div class="admin-categories d-flex">
+            <div class="category-form m-3 p-2 w-50">
+              <h3>Business Category</h3>
+              <form action="">
+                <div class="mb-3">
+                  <label for="">Category Name</label>
+                  <input type="text" id="category-name" class="form-control" />
+                </div>
+                <button type="button" class="btn btn-success add-category">
+                  ADD CATEGORY
+                </button>
+              </form>
+            </div>
+            <div class="category-table m-3 p-2 w-50">
+              <caption>
+                Categories
+              </caption>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Category name</th>
+                  </tr>
+                </thead>
+                <tbody class="category-list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="admin-content">
+          <div class="admin-products d-flex">
+            <div class="product-form m-3 p-2 w-50">
+              <h3>Register Business</h3>
+              <form action="" id="business-form">
+                <div class="mb-3">
+                  <label for="">Category</label>
+                  <select id="business-category" class="form-control"></select>
+                </div>
+                <div class="mb-3">
+                  <label for="">Brand Name</label>
+                  <input type="text" id="business-name" class="form-control" />
+                </div>
+                <!-- <div class="mb-3">
+                  <label for="">Product Image</label>
+                  <input
+                    type="file"
+                    id="product-image"
+                    name="img"
+                    accept="image/*"
+                    class="form-control"
+                  />
+                </div> -->
+                <div class="mb-3">
+                  <label for="">Description</label>
+                  <textarea type="text" id="business-description" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="">What We Do</label>
+                  <input type="text" id="business-services" class="form-control" />
+                </div>
+                <button type="button" class="btn btn-success add-product">
+                  ADD BUSINESS
+                </button>
+              </form>
+            </div>
+            <div class="product-table m-3 p-2 w-50">
+              <caption>
+                Products
+              </caption>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Brand Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Likes</th>
+                    <th scope="col">What we do</th>
+                  </tr>
+                </thead>
+                <tbody class="product-list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script
