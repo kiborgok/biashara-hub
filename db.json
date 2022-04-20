@@ -1,0 +1,131 @@
+{
+  "categories": [
+    { "id": 1, "category": "Retailer" },
+    { "id": 2, "category": "Food Service" },
+    { "id": 3, "category": "Food Service" },
+    { "id": 4, "category": "Supplier/Raw Ingredient Distributor" },
+    { "id": 5, "category": "Manufacturer" }
+  ],
+  "businesses": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "QuickMart Supermarkets",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Chandarana Supermarkets",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Naivas Limited",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Khetia's Supermarkets",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Maathai Supermarkets",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "name": "Uber Eats",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "name": "Glovo",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "name": "Jumia Food",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "name": "Yum Delivery",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "name": "Galitos Food Delivery",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 11,
+      "categoryId": 3,
+      "name": "DOSHI & COMPANY (HARDWARE) LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 12,
+      "categoryId": 3,
+      "name": "KITUI FLOUR MILLS LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 13,
+      "categoryId": 3,
+      "name": "TWIGA FOODS LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 14,
+      "categoryId": 3,
+      "name": "CORRUGATED SHEET LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    },
+    {
+      "id": 15,
+      "categoryId": 3,
+      "name": "BIDCO AFRICA LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
+      "services": ["service1", "service2", "service3"],
+      "likes": 0
+    }
+  ]
+}
