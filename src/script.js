@@ -1,4 +1,5 @@
-//require("dotenv").config();
+//require("dotenv").config()
+
 let home = document.getElementById("home");
 let homeDiv = document.querySelector(".home-container");
 let login = document.getElementById("login");

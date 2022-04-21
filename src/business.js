@@ -31,9 +31,10 @@ categoryForm.addEventListener("submit", async (e) => {
   tr.appendChild(td1)
   tr.appendChild(td2);
   categoryTableContent.appendChild(tr)
+  categoryForm.reset();
 });
 
-businessForm.addEventListener("submit", (e) => {
+businessForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const categoryName = e.target.select.options[e.target.select.selectedIndex].textContent;
   const categoryId = parseInt(e.target.select.value);
@@ -49,7 +50,28 @@ businessForm.addEventListener("submit", (e) => {
     services,
     likes
   };
-  createBusiness(business)
+  const businessResp = await createBusiness(business)
+  const tr = document.createElement("tr");
+  const td1 = document.createElement("td");
+  const td2 = document.createElement("td");
+  const td3 = document.createElement("td");
+  const td4 = document.createElement("td");
+  const td5 = document.createElement("td");
+  const td6 = document.createElement("td");
+  td1.textContent = businessResp.id;
+  td2.textContent = businessResp.category.category;
+  td3.textContent = businessResp.name;
+  td4.textContent = businessResp.description;
+  td5.textContent = businessResp.likes;
+  td6.textContent = businessResp.services;
+   tr.appendChild(td1);
+   tr.appendChild(td2);
+   tr.appendChild(td3);
+   tr.appendChild(td4);
+   tr.appendChild(td5);
+   tr.appendChild(td6);
+  businessesTable.appendChild(tr);
+  businessForm.reset()
 });
 
 function loadCategories() {
@@ -58,19 +80,19 @@ function loadCategories() {
     .then((categories) => categories);
 }
 
-async function adminBusinessesTable() {
-  let businesses = await loadCategories();
-  categories.forEach((category) => {
-    const tr = document.createElement("tr");
-    const td1 = document.createElement("td");
-    const td2 = document.createElement("td");
-    td1.textContent = category.id;
-    td2.textContent = category.category;
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    categoriesTable.appendChild(tr);
-  });
-}
+// async function adminBusinessesTable() {
+//   let businesses = await loadCategories();
+//   categories.forEach((category) => {
+//     const tr = document.createElement("tr");
+//     const td1 = document.createElement("td");
+//     const td2 = document.createElement("td");
+//     td1.textContent = category.id;
+//     td2.textContent = category.category;
+//     tr.appendChild(td1);
+//     tr.appendChild(td2);
+//     categoriesTable.appendChild(tr);
+//   });
+// }
 
 async function adminBusinessesTable() {
   let businesses = await loadBusinesses();
@@ -83,6 +105,20 @@ async function adminBusinessesTable() {
     const td4 = document.createElement("td");
     const td5 = document.createElement("td");
     const td6 = document.createElement("td");
+    const td7 = document.createElement("button");
+    td7.setAttribute("class", "btn-danger")
+    td7.setAttribute("type", "button");
+    td7.textContent = "Delete"
+    td7.style.margin = "10px"
+    td7.style.border = "none";
+    td7.style.borderRadius = "10px";
+    td7.style.backgroundColor = "red";
+    td7.addEventListener("click", async (e) => {
+      //console.log(parseInt(e.target.parentNode.firstChild.textContent));
+      const id = parseInt(e.target.parentNode.firstChild.textContent)
+      await deleteBusiness(id)
+      e.target.parentNode.remove()
+    })
     td1.textContent = business.id;
     td2.textContent = business.category.category;
     td3.textContent = business.name;
@@ -95,6 +131,7 @@ async function adminBusinessesTable() {
     tr.appendChild(td4);
     tr.appendChild(td5);
     tr.appendChild(td6);
+    tr.appendChild(td7);
     businessesTable.appendChild(tr);
   });
 }
@@ -123,6 +160,19 @@ function createCategory(category) {
       Accept: "application/json",
     },
     body: JSON.stringify({ category }),
+  })
+    .then((res) => res.json())
+    .then((data) => data);
+}
+
+function deleteBusiness(businessId) {
+  return fetch(`http://localhost:3000/businesses/${businessId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify({ id: businessId }),
   })
     .then((res) => res.json())
     .then((data) => data);
