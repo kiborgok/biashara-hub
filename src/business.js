@@ -75,7 +75,7 @@ businessForm.addEventListener("submit", async (e) => {
 });
 
 function loadCategories() {
-  return fetch("http://localhost:3000/categories")
+  return fetch("https://storied-starburst-3ff082.netlify.app/categories")
     .then((res) => res.json())
     .then((categories) => categories);
 }
@@ -153,7 +153,7 @@ async function adminCategoriesTable() {
 adminCategoriesTable();
 
 function createCategory(category) {
-  return fetch(`http://localhost:3000/categories`, {
+  return fetch(`https://storied-starburst-3ff082.netlify.app/categories`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -166,7 +166,7 @@ function createCategory(category) {
 }
 
 function deleteBusiness(businessId) {
-  return fetch(`http://localhost:3000/businesses/${businessId}`, {
+  return fetch(`https://storied-starburst-3ff082.netlify.app/businesses/${businessId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -179,7 +179,7 @@ function deleteBusiness(businessId) {
 }
 
 function createBusiness({category,name,description,services,likes}) {
-  return fetch(`http://localhost:3000/businesses`, {
+  return fetch(`https://storied-starburst-3ff082.netlify.app/businesses`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -277,7 +277,7 @@ async function displayBusinesses(eachCategoryItemsDiv, category) {
 }
 
 function loadBusinesses() {
-  return fetch("http://localhost:3000/businesses")
+  return fetch("https://storied-starburst-3ff082.netlify.app/businesses")
     .then((res) => res.json())
     .then((data) => data);
 }
