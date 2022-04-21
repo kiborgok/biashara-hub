@@ -5,18 +5,18 @@ const businessForm = document.getElementById("business-form");
 const categoryTableContent = document.querySelector(".category-list");
 const selectElement = document.querySelector("#business-category");
 
-displayBusinessSelectOptions()
+displayBusinessSelectOptions();
 
 async function displayBusinessSelectOptions() {
   let categories = await loadCategories();
-  categories.forEach(category => {
+  categories.forEach((category) => {
     //let optionValue = category.id
     const option = document.createElement("option");
-    
+
     option.setAttribute("value", category.id);
     option.textContent = category.category;
-    selectElement.appendChild(option)
-  })
+    selectElement.appendChild(option);
+  });
 }
 
 categoryForm.addEventListener("submit", async (e) => {
@@ -26,31 +26,32 @@ categoryForm.addEventListener("submit", async (e) => {
   const tr = document.createElement("tr");
   const td1 = document.createElement("td");
   const td2 = document.createElement("td");
-  td1.textContent = category.id
+  td1.textContent = category.id;
   td2.textContent = category.category;
-  tr.appendChild(td1)
+  tr.appendChild(td1);
   tr.appendChild(td2);
-  categoryTableContent.appendChild(tr)
+  categoryTableContent.appendChild(tr);
   categoryForm.reset();
 });
 
 businessForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const categoryName = e.target.select.options[e.target.select.selectedIndex].textContent;
+  const categoryName =
+    e.target.select.options[e.target.select.selectedIndex].textContent;
   const categoryId = parseInt(e.target.select.value);
   const name = e.target.name.value;
   const description = e.target.description.value;
   let services = e.target.services.value;
-  services = services.split(",")
-  const likes = 0
+  services = services.split(",");
+  const likes = 0;
   const business = {
     category: { id: categoryId, category: categoryName },
     name,
     description,
     services,
-    likes
+    likes,
   };
-  const businessResp = await createBusiness(business)
+  const businessResp = await createBusiness(business);
   const tr = document.createElement("tr");
   const td1 = document.createElement("td");
   const td2 = document.createElement("td");
@@ -64,18 +65,20 @@ businessForm.addEventListener("submit", async (e) => {
   td4.textContent = businessResp.description;
   td5.textContent = businessResp.likes;
   td6.textContent = businessResp.services;
-   tr.appendChild(td1);
-   tr.appendChild(td2);
-   tr.appendChild(td3);
-   tr.appendChild(td4);
-   tr.appendChild(td5);
-   tr.appendChild(td6);
+  tr.appendChild(td1);
+  tr.appendChild(td2);
+  tr.appendChild(td3);
+  tr.appendChild(td4);
+  tr.appendChild(td5);
+  tr.appendChild(td6);
   businessesTable.appendChild(tr);
-  businessForm.reset()
+  businessForm.reset();
 });
 
 function loadCategories() {
-  return fetch("https://storied-starburst-3ff082.netlify.app/categories")
+  return fetch(
+    "https://my-json-server.typicode.com/kiborgok/biashara-hub/categories"
+  )
     .then((res) => res.json())
     .then((categories) => categories);
 }
@@ -97,7 +100,7 @@ function loadCategories() {
 async function adminBusinessesTable() {
   let businesses = await loadBusinesses();
   businesses.forEach((business) => {
-    console.log(business.services)
+    console.log(business.services);
     const tr = document.createElement("tr");
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
@@ -106,19 +109,19 @@ async function adminBusinessesTable() {
     const td5 = document.createElement("td");
     const td6 = document.createElement("td");
     const td7 = document.createElement("button");
-    td7.setAttribute("class", "btn-danger")
+    td7.setAttribute("class", "btn-danger");
     td7.setAttribute("type", "button");
-    td7.textContent = "Delete"
-    td7.style.margin = "10px"
+    td7.textContent = "Delete";
+    td7.style.margin = "10px";
     td7.style.border = "none";
     td7.style.borderRadius = "10px";
     td7.style.backgroundColor = "red";
     td7.addEventListener("click", async (e) => {
       //console.log(parseInt(e.target.parentNode.firstChild.textContent));
-      const id = parseInt(e.target.parentNode.firstChild.textContent)
-      await deleteBusiness(id)
-      e.target.parentNode.remove()
-    })
+      const id = parseInt(e.target.parentNode.firstChild.textContent);
+      await deleteBusiness(id);
+      e.target.parentNode.remove();
+    });
     td1.textContent = business.id;
     td2.textContent = business.category.category;
     td3.textContent = business.name;
@@ -135,7 +138,7 @@ async function adminBusinessesTable() {
     businessesTable.appendChild(tr);
   });
 }
-adminBusinessesTable()
+adminBusinessesTable();
 
 async function adminCategoriesTable() {
   let categories = await loadCategories();
@@ -153,44 +156,52 @@ async function adminCategoriesTable() {
 adminCategoriesTable();
 
 function createCategory(category) {
-  return fetch(`https://storied-starburst-3ff082.netlify.app/categories`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ category }),
-  })
+  return fetch(
+    `https://my-json-server.typicode.com/kiborgok/biashara-hub/categories`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ category }),
+    }
+  )
     .then((res) => res.json())
     .then((data) => data);
 }
 
 function deleteBusiness(businessId) {
-  return fetch(`https://storied-starburst-3ff082.netlify.app/businesses/${businessId}`, {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ id: businessId }),
-  })
+  return fetch(
+    `https://my-json-server.typicode.com/kiborgok/biashara-hub/businesses/${businessId}`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ id: businessId }),
+    }
+  )
     .then((res) => res.json())
     .then((data) => data);
 }
 
-function createBusiness({category,name,description,services,likes}) {
-  return fetch(`https://storied-starburst-3ff082.netlify.app/businesses`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    },
-    body: JSON.stringify({ category, name, description, services, likes }),
-  })
+function createBusiness({ category, name, description, services, likes }) {
+  return fetch(
+    `https://my-json-server.typicode.com/kiborgok/biashara-hub/businesses`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({ category, name, description, services, likes }),
+    }
+  )
     .then((res) => res.json())
     .then((data) => data);
 }
-
 
 async function displayCategories() {
   let categories = await loadCategories();
@@ -277,7 +288,9 @@ async function displayBusinesses(eachCategoryItemsDiv, category) {
 }
 
 function loadBusinesses() {
-  return fetch("https://storied-starburst-3ff082.netlify.app/businesses")
+  return fetch(
+    "https://my-json-server.typicode.com/kiborgok/biashara-hub/businesses"
+  )
     .then((res) => res.json())
     .then((data) => data);
 }
