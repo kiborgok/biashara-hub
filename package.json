@@ -2,8 +2,10 @@
   "name": "biashara-hub",
   "version": "1.0.0",
   "description": "An application that brings together businesses and individuals",
-  "main": "index.html",
+  "type": "module",
+  "main": "script.js",
   "scripts": {
+    "postinstall": "json-server --watch db.json --port process.env.M3O_API_TOKEN",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
