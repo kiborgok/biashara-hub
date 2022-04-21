@@ -5,7 +5,7 @@
   "type": "module",
   "main": "script.js",
   "scripts": {
-    "start": "json-server --watch db.json --port 3000",
+    "start": "json-server --host=https://storied-starburst-3ff082.netlify.app/ --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
