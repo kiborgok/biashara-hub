@@ -1,130 +1,404 @@
 {
   "categories": [
-    { "id": 1, "category": "Retailer" },
-    { "id": 2, "category": "Food Service" },
-    { "id": 3, "category": "Food Service" },
-    { "id": 4, "category": "Supplier/Raw Ingredient Distributor" },
-    { "id": 5, "category": "Manufacturer" }
+    {
+      "id": 1,
+      "category": "Retailer"
+    },
+    {
+      "id": 2,
+      "category": "Food Service"
+    },
+    {
+      "id": 3,
+      "category": "Manufacturing"
+    },
+    {
+      "id": 4,
+      "category": "Business Services"
+    },
+    {
+      "id": 5,
+      "category": "Investors"
+    },
+    {
+      "category": "Banking",
+      "id": 6
+    }
   ],
   "businesses": [
     {
       "id": 1,
-      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "category": "Retailer"
+      },
       "name": "QuickMart Supermarkets",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
-      "likes": 0
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 234
     },
     {
       "id": 2,
-      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "category": "Retailer"
+      },
       "name": "Chandarana Supermarkets",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
-      "likes": 0
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 94
     },
     {
       "id": 3,
-      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "category": "Retailer"
+      },
       "name": "Naivas Limited",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
-      "likes": 0
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 1200
     },
     {
       "id": 4,
-      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "category": "Retailer"
+      },
       "name": "Khetia's Supermarkets",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 5,
-      "categoryId": 1,
+      "category": {
+        "id": 1,
+        "category": "Retailer"
+      },
       "name": "Maathai Supermarkets",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 6,
-      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "category": "Food Service"
+      },
       "name": "Uber Eats",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 7,
-      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "category": "Food Service"
+      },
       "name": "Glovo",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 8,
-      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "category": "Food Service"
+      },
       "name": "Jumia Food",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 9,
-      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "category": "Food Service"
+      },
       "name": "Yum Delivery",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 10,
-      "categoryId": 2,
+      "category": {
+        "id": 2,
+        "category": "Food Service"
+      },
       "name": "Galitos Food Delivery",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 11,
-      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "category": "Manufacturing"
+      },
       "name": "DOSHI & COMPANY (HARDWARE) LIMITED",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 12,
-      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "category": "Manufacturing"
+      },
       "name": "KITUI FLOUR MILLS LIMITED",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 13,
-      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "category": "Manufacturing"
+      },
       "name": "TWIGA FOODS LIMITED",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 14,
-      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "category": "Manufacturing"
+      },
       "name": "CORRUGATED SHEET LIMITED",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     },
     {
       "id": 15,
-      "categoryId": 3,
+      "category": {
+        "id": 3,
+        "category": "Manufacturing"
+      },
       "name": "BIDCO AFRICA LIMITED",
-      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam aut a voluptatem perspiciatis esse modi dolores dolor odit nam explicabo vel provident, quisquam voluptate maxime tempora obcaecati voluptas! Aliquid, placeat!",
-      "services": ["service1", "service2", "service3"],
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 16,
+      "category": {
+        "id": 4,
+        "category": "Business Services"
+      },
+      "name": "Growth Partners",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 17,
+      "category": {
+        "id": 4,
+        "category": "Business Services"
+      },
+      "name": "Offers Africa Limited",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 18,
+      "category": {
+        "id": 4,
+        "category": "Business Services"
+      },
+      "name": "Viffa Consult Limited",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 19,
+      "category": {
+        "id": 4,
+        "category": "Business Services"
+      },
+      "name": "SPERANZA NTERNATIONAL LIMITED",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 20,
+      "category": {
+        "id": 4,
+        "category": "Business Services"
+      },
+      "name": "Urban Properties Consultants & Developers Ltd",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 21,
+      "category": {
+        "id": 5,
+        "category": "Investors"
+      },
+      "name": "FAST Accelerator",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 22,
+      "category": {
+        "id": 5,
+        "category": "Investors"
+      },
+      "name": "Aavishkaar Venture Capital",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 23,
+      "category": {
+        "id": 5,
+        "category": "Investors"
+      },
+      "name": "DCVC",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 24,
+      "category": {
+        "id": 5,
+        "category": "Investors"
+      },
+      "name": "Patrick J. McGovern Foundation",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
+      "likes": 0
+    },
+    {
+      "id": 25,
+      "category": {
+        "id": 5,
+        "category": "Investors"
+      },
+      "name": "Musha Ventures",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit",
+      "services": [
+        "service1",
+        "service2",
+        "service3"
+      ],
       "likes": 0
     }
   ]
