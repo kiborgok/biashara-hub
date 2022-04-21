@@ -1,21 +1,26 @@
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   /* background-color: rgba(255, 1, 1, 0.1); */
 }
-.active{
-  color: orangered!important;
+.active {
+  color: orangered !important;
 }
-.signin, .signup{
+.signin,
+.signup {
   margin: auto;
 }
-.signup-hidden, .signin-hidden, .home-container-hidden, .admin-container-hidden{
-    display: none;
+.signup-hidden,
+.signin-hidden,
+.home-container-hidden,
+.admin-container-hidden {
+  display: none;
 }
 
-.signup-div, .signin-div {
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
+.signup-div,
+.signin-div {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
   width: 40%;
 }
 
@@ -26,8 +31,8 @@ body {
   padding: 10px 20px;
 }
 
-label{
-    margin-bottom: 5px;
+label {
+  margin-bottom: 5px;
 }
 
 input {
@@ -36,22 +41,46 @@ input {
 }
 
 .form-control {
-  border: 1px solid #dc354575;
+  border: 1px solid orange;
   border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: lightgray;
 }
 
-.btn{
+.btn {
   border-radius: 8px;
   border: none;
-  background: linear-gradient(
-    to right,
-    rgba(249, 0, 104, 1) 0%,
-    rgba(247, 117, 24, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(249, 0, 104, 1) 0%,
-    rgba(247, 117, 24, 1) 100%
-  );
+  background: linear-gradient(to right, orangered 0%, orange 100%);
+  background: -webkit-linear-gradient(left, orangered 0%, orange 100%);
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid orange;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 8px;
+  width: 350px;
+}
+.item:hover {
+  box-shadow: 2px 2px 2px 2px orange;
+}
+.each-category-items {
+  display: flex;
+
+  flex-wrap: wrap;
+}
+.bi {
+  font-size: 26px;
+  cursor: pointer;
+  color: orangered;
+  margin-bottom: 9px;
+  font-weight: bold;
 }
