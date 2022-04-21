@@ -5,10 +5,22 @@ const businessForm = document.getElementById("business-form");
 const categoryTableContent = document.querySelector(".category-list");
 const selectElement = document.querySelector("#business-category");
 
+async function getCategories() {
+  if (localStorage.getItem("categories")){
+    const categories = await JSON.parse(localStorage.getItem("categories"))
+    console.log(categories);
+    return categories
+  }
+  const categories = await loadCategories()
+  localStorage.setItem("categories", JSON.stringify(categories));
+  
+  return categories
+}
+
 displayBusinessSelectOptions();
 
 async function displayBusinessSelectOptions() {
-  let categories = await loadCategories();
+  const categories = await getCategories();
   categories.forEach((category) => {
     //let optionValue = category.id
     const option = document.createElement("option");
@@ -22,7 +34,9 @@ async function displayBusinessSelectOptions() {
 categoryForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const categoryValue = e.target.category.value;
-  const category = await createCategory(categoryValue);
+  let category = await createCategory(categoryValue);
+  const categories = JSON.parse(localStorage.getItem("categories"))
+  localStorage.setItem("categories",JSON.stringify([...categories,category]))
   const tr = document.createElement("tr");
   const td1 = document.createElement("td");
   const td2 = document.createElement("td");
@@ -83,24 +97,9 @@ function loadCategories() {
     .then((categories) => categories);
 }
 
-// async function adminBusinessesTable() {
-//   let businesses = await loadCategories();
-//   categories.forEach((category) => {
-//     const tr = document.createElement("tr");
-//     const td1 = document.createElement("td");
-//     const td2 = document.createElement("td");
-//     td1.textContent = category.id;
-//     td2.textContent = category.category;
-//     tr.appendChild(td1);
-//     tr.appendChild(td2);
-//     categoriesTable.appendChild(tr);
-//   });
-// }
-
 async function adminBusinessesTable() {
   let businesses = await loadBusinesses();
   businesses.forEach((business) => {
-    console.log(business.services);
     const tr = document.createElement("tr");
     const td1 = document.createElement("td");
     const td2 = document.createElement("td");
@@ -141,7 +140,7 @@ async function adminBusinessesTable() {
 adminBusinessesTable();
 
 async function adminCategoriesTable() {
-  let categories = await loadCategories();
+  const categories = await getCategories();
   categories.forEach((category) => {
     const tr = document.createElement("tr");
     const td1 = document.createElement("td");
@@ -204,7 +203,7 @@ function createBusiness({ category, name, description, services, likes }) {
 }
 
 async function displayCategories() {
-  let categories = await loadCategories();
+  const categories = await getCategories();
   createCategoryCard(categories);
 }
 displayCategories();
