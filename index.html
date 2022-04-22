@@ -29,7 +29,17 @@
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: orange;font-weight: bold;font-size: 1.5em;font-family: Lobster;">Biashara <span style="color: orangered;">Hub</span></a>
+        <a
+          class="navbar-brand"
+          href="#"
+          style="
+            color: orange;
+            font-weight: bold;
+            font-size: 1.5em;
+            font-family: Lobster;
+          "
+          >Biashara <span style="color: orangered">Hub</span></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -85,7 +95,7 @@
               </ul>
             </li> -->
           </ul>
-        
+
           <button
             class="btn btn-outline-success"
             id="logout-user"
@@ -96,32 +106,32 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="container d-flex">
       <!-- Home content -->
-       
+
       <div class="home-container d-flex flex-column">
-         <form id="search-form" style="min-width: 50%;" class="d-flex justify-content-center align-items-center w-50 align-self-center">
-            <input
-              class="form-control me-2"
-              type="search"
-              name="search"
-              placeholder="Search category"
-              aria-label="Search"
-              style="margin: 0px;"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
+        <form
+          id="search-form"
+          style="min-width: 50%"
+          class="d-flex justify-content-center align-items-center w-50 align-self-center"
+        >
+          <input
+            class="form-control me-2"
+            type="search"
+            name="search"
+            placeholder="Search category"
+            aria-label="Search"
+            style="margin: 0px"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
         <!-- Categories content -->
       </div>
       <!-- Modal container -->
       <div id="modal-container" class="modal-container">
         <span class="close" title="Close">×</span>
-        <div class="modal-content">
-          
-        </div>
+        <div class="modal-content"></div>
       </div>
       <!-- Sign up form -->
       <div class="signup-hidden signup">
@@ -136,6 +146,7 @@
               class="form-control"
               name="email"
               placeholder="Email"
+              required
             />
           </div>
           <div class="form-group">
@@ -145,6 +156,7 @@
               class="form-control"
               placeholder="Username"
               name="username"
+              required
             />
           </div>
           <div class="form-group">
@@ -154,9 +166,11 @@
               class="form-control"
               placeholder="Password"
               name="password"
+              required
             />
+            <span class="text-muted"><span style="color: red;">*</span> Password MUST be 8 characters long.</span>
           </div>
-          <button type="submit" class="btn btn-primary">Sign up</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">Sign up</button>
         </form>
       </div>
       <!-- Sign in form -->
@@ -172,6 +186,7 @@
               class="form-control"
               name="email"
               placeholder="Email"
+              required
             />
           </div>
           <div class="form-group">
@@ -181,6 +196,7 @@
               class="form-control"
               placeholder="Password"
               name="password"
+              required
             />
           </div>
           <button type="submit" class="btn btn-primary">Sign in</button>
@@ -189,7 +205,12 @@
       <!-- Profile -->
       <div id="profile-container" class="profile-container">
         <div class="profile-content d-flex">
-          <img src="./image/profile.jpg" alt="Profile" width="45%" style="border-radius: 20px;">
+          <img
+            src="./image/profile.jpg"
+            alt="Profile"
+            width="45%"
+            style="border-radius: 20px"
+          />
           <div class="profile-info">
             <h4 id="profile-email"></h4>
             <h4 id="profile-username"></h4>
