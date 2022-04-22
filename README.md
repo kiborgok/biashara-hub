@@ -25,8 +25,7 @@
 
 * Open the index.html file from your preferred browser.
 ### Online link
-* Click the link in the about section from your preferred device. Either a computer,phone,tablet or an Ipad.
-
+* Click the link in the about section from your preferred device.
 ## Technology Used
 * HTML - Used to build the structure of the page.
 
